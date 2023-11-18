@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Login Page - BroBlockChain</title>
+    <style>
+      .login-form-custom {
+        width: 300px;
+        margin: 0 auto;
+        font-family: Tahoma, Geneva, sans-serif;
+      }
+      .login-form-custom h1 {
+        text-align: center;
+        color: #4d4d4d;
+        font-family: Tahoma;
+        font-size: 24px;
+        padding: 20px 0 20px 0;
+      }
+      .login-form-custom h3 {
+        text-align: center;
+        color: #4d4d4d;
+        font-family: Tahoma;
+        font-size: 14px;
+        padding: 20px 0 20px 0;
+      }
+      .login-form-custom input[type="password"],
+      .login-form-custom input[type="text"] {
+        width: 100%;
+        padding: 15px;
+        border: 1px solid #dddddd;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+      }
+      .login-form-custom input[type="email"] {
+        width: 100%;
+        padding: 15px;
+        border: 1px solid #dddddd;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+      }
+      .login-form-custom input[type="phone"] {
+        width: 100%;
+        padding: 15px;
+        border: 1px solid #dddddd;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+      }
+      .login-form-custom input[type="submit"] {
+        width: 100%;
+        padding: 15px;
+        background-color: #535b63;
+        border: 0;
+        box-sizing: border-box;
+        cursor: pointer;
+        font-weight: bold;
+        color: #ffffff;
+      }
+      #inner {
+        display: table;
+        margin: 0 auto;
+      }
+
+      a.four:link {
+        text-align: center;
+        color: #4d4d4d;
+        font-size: 13px;
+        padding: 10px 10px 10px 10px;
+        font-family: Tahoma;
+        text-decoration: none;
+      }
+      a.four:visited {
+        text-decoration: none;
+      }
+      a.four:hover {
+        text-decoration: underline;
+      }
+
+      .padding-height {
+        height: 8vh;
+      }
+      .padding-height-link {
+        height: 2vh;
+      }
+      #outer {
+        width: 100%;
+      }
+
+      .inner-element {
+        padding-top: 5vh;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="login-form-custom">
+        <div id="outer" class="padding-height"></div>
+        <div class="row">
+          <div id="outer">
+            <div id="inner" class="column">
+              <img
+                width="200px"
+                height="200px"
+                style="color: white"
+                src="../../../assets/nationalEmblem.jpeg"
+              />
+            </div>
+			<h1 style="font-family: Tahoma;">GR BlockChain</h1>  
+			<h3 style="font-family: Tahoma;">Registration</h3>  
+
+        </div>
+          
+        </div>
+
+        <form action="auth" method="POST">
+          <input type="text" [(ngModel)]="name" name="name" placeholder="Name" required />    
+          <input type="text" [(ngModel)]="firmName" name="firmName" placeholder="Firm Name" required />     
+          <input type="email" [(ngModel)]="email" name="email" placeholder="Email" required />
+          <input type="phone" [(ngModel)]="phone" name="phone" placeholder="Phone" required />
+          <input
+            type="password"
+            name="password"
+            [(ngModel)]="password"
+            placeholder="Password"
+            required
+          />
+          <input
+            type="password"
+            name="confirm_password"
+            [(ngModel)]="confirm_password"
+            placeholder="Confirm password"
+            required
+          />
+          
+          <input type="submit" (click)="register()" type="submit" [disabled]="!email || !password"/>
+          <div class="padding-height-link"></div>
+          <div style="text-align: center">
+            <a class="four" [routerLink]="['/login']" href="#">Have an account already? Click here!</a>
+            <!-- <li class="nav-item "  routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+						<a class="nav-link" [routerLink]="['/home_one']" >Home One <span class="sr-only"></span></a> -->
+            <!-- more links here -->
+          </div>
+        </form>
+    </div>
+  </body>
+</html>

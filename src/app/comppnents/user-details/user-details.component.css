@@ -1,0 +1,97 @@
+.btn {
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857;
+    margin-bottom: 20px;
+    margin-right: 10px;
+    padding: 6px 12px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-decoration: none;
+    position: relative;
+}
+.btn-success {
+    background-color: #6946a1;
+    border-color: #564cae;
+    color: #fff;
+}
+.badge {
+    background-color:#ff0000;
+    border-radius: 10px;
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    min-width: 10px;
+    padding: 3px 7px;
+    text-align: center;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.radius-0 {
+    border-radius: 3 !important;
+}
+span.badge-dark {
+    background: #555 !important;
+}
+.badge.badge-corner {
+    color: #fff !important;
+    position: absolute !important;
+    right: -6px !important;
+    top: -8px !important;
+}
+.btn-danger {
+    background-color: #d9534f;
+    border-color: #d43f3a;
+    color: #fff;
+}
+.btn-info {
+    background-color: #5bc0de;
+    border-color: #46b8da;
+    color: #fff;
+}
+.btn-warning {
+    background-color: #f0ad4e;
+    border-color: #eea236;
+    color: #fff;
+}
+.btn-clean {
+    color: #555;
+}
+span.badge-aqua {
+    background: #27d7e7 none repeat scroll 0 0 !important;
+}
+span.badge-dark {
+    background: #555 none repeat scroll 0 0 !important;
+}
+span.badge-purple{
+    background: #9b6bcc none repeat scroll 0 0 !important;
+}
+span.badge-yellow {
+    background: #f1c40f none repeat scroll 0 0 !important;
+}
+.size-20 {
+    font-size: 20px !important;
+    line-height: 26px !important;
+}
+.btn-default {
+    background-color: #fff;
+    border-color: #ccc;
+    color: #333;
+}
+span.badge-green{
+    background: #2ecc71 none repeat scroll 0 0 !important;
+}
+span.badge-red{
+    background: #e74c3c none repeat scroll 0 0 !important;
+}
+.radius-3 {
+    border-radius: 3px !important;
+}

@@ -1,0 +1,31 @@
+
+
+<nav class="navbar navbar-dark bg-dark">
+    <!-- <img src="assets/nationalEmblem.jpeg" width="50" height="50" class="d-inline-block align-top" alt="">   -->
+      <div>
+      <img src="assets/nationalEmblem.jpeg" width="50" height="50" class="d-inline-block align-top" alt="">  
+      &nbsp;
+      <a class="navbar-brand" routerLink="#">
+        GR BlockChain
+      </a>
+    </div>
+      <div>
+        
+    <button  [routerLink]="'/adminHomePage'" class="btn btn-outline-light">
+      Home
+    </button>
+    &nbsp;
+        <button  [routerLink]="'/grListAdmin'" class="btn btn-outline-light">
+            G.R List
+          </button>
+          &nbsp;
+        <button (click)="clearSession()" class="btn btn-outline-light">
+          Logout
+        </button>
+  
+      </div>
+    </nav>
+    
+    <br>
+    
+  

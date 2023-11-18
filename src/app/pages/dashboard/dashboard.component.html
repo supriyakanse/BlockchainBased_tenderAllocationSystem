@@ -1,0 +1,29 @@
+<app-nav-bar></app-nav-bar>
+<app-user-details></app-user-details>
+  <div class="container">
+    <table class="table table-hover top-margin">
+      <thead>
+        <th>Chain id</th>
+        <th>GR Name</th>
+        <th>GR Description</th>
+        <th>GR Amount</th>
+        <th>Status</th>
+        <th>Associated to</th>
+        <th>GR Document</th>
+        <th></th>
+      </thead>
+      <tbody>
+        <tr *ngFor="let gr of list">
+          <td>{{gr.chainId}}</td>
+          <td>{{gr.grName}}</td>
+          <td>{{gr.description}}</td>
+          <td>{{gr.grAmount}}</td>
+          <td>{{gr.status}}</td>
+          <td>{{gr.associatedTo}}</td>
+          <td><button (click)="downloadFile(gr.grDocumentUrl)" class="btn btn-outline-dark">
+            Download
+           </button></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>

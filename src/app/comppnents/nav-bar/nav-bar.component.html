@@ -1,0 +1,19 @@
+
+
+<nav class="navbar navbar-dark bg-dark">
+    <img src="assets/nationalEmblem.jpeg" width="50" height="50" class="d-inline-block align-top" alt="">  
+    <a class="navbar-brand" routerLink="#">
+        &nbsp;GR BlockChain
+      </a>
+      <div>
+       
+        <button routerLink="/new/transaction" (click)="loginLogout()" class="btn btn-outline-light">
+          {{ authenticationService.isLoggedIn == true ? 'Logout' : 'Login' }}
+        </button>
+  
+      </div>
+    </nav>
+    
+    <br>
+    
+  

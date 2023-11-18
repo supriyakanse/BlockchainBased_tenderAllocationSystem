@@ -1,0 +1,19 @@
+<div  *ngIf="authenticationService.isLoggedIn == true"  class="container">
+	<div class="form-group">
+	    <small id="fromAddressHelp" class="form-text text-muted">
+	    	Logged in user: {{loggedInUserEmail}}
+	    </small>
+		<br>
+		</div>
+		
+		
+	
+		<div>
+			<button (click)="openNotification()" class="btn btn-dark"><span [routerLink]="'/grListAdmin'" class="badge badge-light badge-corner radius-0">{{newNotification}}</span>
+				Notifications
+			  </button>
+		</div>
+
+
+	
+</div>

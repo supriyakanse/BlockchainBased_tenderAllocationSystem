@@ -1,0 +1,60 @@
+
+<div class="container">
+	<h1>Create new chain</h1>
+	<p>Enter the details of new G.R</p>
+
+	<br>
+
+	<div class="form-group">
+	    <label for="fromAddress">Chain Name</label>
+	    <input type="text" name="chainName" [(ngModel)]="chainName" class="form-control" id="fromAddress" aria-describedby="fromAddressHelp" >
+	    <small id="fromAddressHelp" class="form-text text-muted">
+	    	This is would be unique according to individual G.R.
+	    </small>
+		<br>
+
+ 		<label for="fromAddress">Description</label>
+		<input type="text" name="description" [(ngModel)]="description" class="form-control" id="fromAddress" aria-describedby="fromAddressHelp">
+		<small id="fromAddressHelp" class="form-text text-muted">
+	    	This is would be description about the G.R.
+	    </small>
+		<br>
+
+ 		<label for="fromAddress">Amount Sanctioned</label>
+		<input type="text" name="amount" [(ngModel)]="amount" class="form-control" id="fromAddress" aria-describedby="fromAddressHelp">
+		<small id="fromAddressHelp" class="form-text text-muted">
+	    	This is would be the amount sanctioned in the G.R.
+	    </small>
+		<br>
+		<label for="fromAddress">GR Document</label>
+			<div class="card-body">
+			  <input type="file" (change)="chooseFile($event)" accept=".pdf,.doc" />
+			  <br><br>
+			  <div class="progress">
+				<div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width]="(uploadProgress | async) + '%'" [attr.aria-valuenow]="(uploadProgress | async)" aria-valuemin="0" aria-valuemax="100"></div>
+			  </div>
+			  <br>
+			  <!-- <progress max="100" [value]="(uploadProgress | async)"></progress> -->
+
+			  <div *ngIf="downloadURL | async; let downloadSrc" class="alert alert-info" role="alert">
+				  File uploaded: <a [href]="downloadSrc">{{downloadSrc}}</a>
+			  </div>
+			  <br>
+			  <div class="btn-group" role="group" *ngIf="uploadState | async; let state">
+				  <button type="button" class="btn btn-primary" (click)="task.cancel()" [disabled]="!(state === 'paused' || state === 'running')">Cancel</button>
+			  </div>
+			  <small id="fromAddressHelp" class="form-text text-muted">
+				This is a mandatory selection.
+			</small>
+			<br>
+
+			
+
+		  </div>
+		  <button type="submit" (click)="createNewBlockChain()" class="btn btn-primary">Create New G.R</button>
+		  <br><br>
+		</div>
+		
+	  
+	
+</div>

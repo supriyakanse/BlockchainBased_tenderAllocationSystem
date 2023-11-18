@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "grblock-86b27": {
+      "hosting": {
+        "GR-BlockChain": [
+          "grblock-86b27"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "grblock-86b27"
+  }
+}
